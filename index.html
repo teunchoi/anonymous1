@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Disentangling Disentangled Representations: Towards Improved Latent Units via Diffusion Models">
+  <meta name="description" content="WAVE: Warp-based Consistent Novel View Synthesis">
   <!-- <meta name="keywords" content="Nerfies, D-NeRF, NeRF"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Disentangling Disentangled Representations: Towards Improved Latent Units via Diffusion Models</title>
@@ -267,7 +267,12 @@
         <br>
         <div class="content has-text-justified">
           <p style="font-size: 13px;">
-            Disentangled representation learning (DRL) aims to break down observed data into core intrinsic factors for a profound understanding of the data. In real-world scenarios, manually defining and labeling these factors are non-trivial, making unsupervised methods attractive. Recently, there have been limited explorations of utilizing diffusion models (DMs), which are already mainstream in generative modeling, for unsupervised DRL. They implement their own inductive bias to ensure that each latent unit input to the DM expresses only one distinct factor. In this context, we design Dynamic Gaussian Anchoring to enforce attribute-separated latent units for more interpretable DRL. This unconventional inductive bias explicitly delineates the decision boundaries between attributes while also promoting the independence among latent units. Additionally, we also propose Skip Dropout technique, which easily modifies the denoising U-Net to be more DRL-friendly, addressing its uncooperative nature with the disentangling feature extractor. Our methods, which carefully consider the latent unit semantics and the distinct DM structure, enhance the practicality of DM-based disentangled representations, demonstrating state-of-the-art disentanglement performance on both synthetic and real data, as well as advantages in downstream tasks.
+            <!-- Disentangled representation learning (DRL) aims to break down observed data into core intrinsic factors for a profound understanding of the data. In real-world scenarios, manually defining and labeling these factors are non-trivial, making unsupervised methods attractive. Recently, there have been limited explorations of utilizing diffusion models (DMs), which are already mainstream in generative modeling, for unsupervised DRL. They implement their own inductive bias to ensure that each latent unit input to the DM expresses only one distinct factor. In this context, we design Dynamic Gaussian Anchoring to enforce attribute-separated latent units for more interpretable DRL. This unconventional inductive bias explicitly delineates the decision boundaries between attributes while also promoting the independence among latent units. Additionally, we also propose Skip Dropout technique, which easily modifies the denoising U-Net to be more DRL-friendly, addressing its uncooperative nature with the disentangling feature extractor. Our methods, which carefully consider the latent unit semantics and the distinct DM structure, enhance the practicality of DM-based disentangled representations, demonstrating state-of-the-art disentanglement performance on both synthetic and real data, as well as advantages in downstream tasks. -->
+            Generating high-quality novel views of a scene from a single image requires maintaining spatial consistency across different viewpoints, commonly referred to as view consistency. 
+            While diffusion models have advanced the task of novel view synthesis, they struggle to preserve spatial coherence across views. 
+            To address this, diffusion models have been combined with 3D models, but such approaches often lack efficiency for practical use due to their complex multi-step pipelines.
+            In this work, we propose a practical method to overcome this limitation without relying on additional models. Our key idea is to enhance diffusion models by incorporating image warping, enabling adaptive attention manipulation and noise re-initialization to mitigate view inconsistency. Through comprehensive metrics and extensive quantitative evaluations and generation results, we demonstrate that our method generates view-consistent images across viewpoints. 
+            Furthermore, our approach is adaptable to various diffusion models, demonstrating its versatility and broader applicability.
           </p>
         </div>
       </div>
