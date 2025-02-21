@@ -43,7 +43,13 @@
         display: flex;
         justify-content: center; /* 중앙 정렬 */
         gap: 10px; /* 이미지 사이 간격 */
-        padding: 20px;
+        padding: 0px;
+        text-align: center;
+    }
+    .gif-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .gif-container img {
         width: 200px; /* 필요에 따라 크기 조절 */
@@ -354,10 +360,19 @@
           <div class="content has-text-justified">
             <br>
             <div class="gif-container">
-              <img src="./static/images/ours.gif" alt="GIF 1">
-              <img src="./static/images/ms.gif" alt="GIF 2">
-              <img src="./static/images/vd.gif" alt="GIF 3">
-            </div>
+              <div class="gif-item">
+                  <img src="gif1.gif" alt="GIF 1">
+                  <p>WAVE</p>
+              </div>
+              <div class="gif-item">
+                  <img src="gif2.gif" alt="GIF 2">
+                  <p>MegaScenes</p>
+              </div>
+              <div class="gif-item">
+                  <img src="gif3.gif" alt="GIF 3">
+                  <p>VistaDream</p>
+              </div>
+          </div>
             <br>
             <br>
             <p style="font-size: 13px;">
