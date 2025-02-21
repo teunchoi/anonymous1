@@ -38,6 +38,18 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    .gif-container {
+        display: flex;
+        justify-content: center; /* 중앙 정렬 */
+        gap: 10px; /* 이미지 사이 간격 */
+        padding: 20px;
+    }
+    .gif-container img {
+        width: 200px; /* 필요에 따라 크기 조절 */
+        height: auto;
+    }
+  </style>
 </head>
 <body>
 
@@ -336,19 +348,21 @@
     <!-- Method. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Comparison with Other Models</h2>
+        <h2 class="title is-3">Qualitative Results</h2>
         <br>
-        <!-- <h4 class="title is-4">Latent Interchange</h4>
+        <h4 class="title is-4">Comparison with Other Models</h4>
           <div class="content has-text-justified">
             <br>
-            <div class="centerImage">
-              <img src="./static/images/figure3_pp.png" alt="pipeline" width="100%">
+            <div class="gif-container">
+              <img src="./static/images/ours.gif" alt="GIF 1">
+              <img src="./static/images/ms.gif" alt="GIF 2">
+              <img src="./static/images/vd.gif" alt="GIF 3">
             </div>
             <br>
             <br>
             <p style="font-size: 13px;">
               Figure 3. Latent interchange results. This figure shows the results of conditional generation using latent units as the condition, where a single latent unit of the source image is replaced with a latent unit from the target image. The first and second rows represent the source image and target image, respectively. The third to sixth rows show the source image with its attribute (e.g., Floor hue, Camera angle) changed to that of the target. (left) represents the Shapes3D dataset, while (right) represents the MPI3D dataset.
-          </div> -->
+          </div>
 
           
       </div>
