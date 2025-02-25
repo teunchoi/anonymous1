@@ -691,15 +691,15 @@ var bulmaCarousel = function (_EventEmitter) {
 
       this._slides.forEach(function (slide) {
         Object(__WEBPACK_IMPORTED_MODULE_1__utils_css__["d" /* removeClasses */])(slide, 'is-active is-current is-slide-previous is-slide-next');
-        if (Math.abs((_this4.state.index - 3) % _this4.state.length) === parseInt(slide.dataset.sliderIndex, 10)) {
+        if (Math.abs((_this4.state.index - 1) % _this4.state.length) === parseInt(slide.dataset.sliderIndex, 10)) {
           slide.classList.add('is-slide-previous');
         }
         if (Math.abs(_this4.state.index % _this4.state.length) === parseInt(slide.dataset.sliderIndex, 10)) {
           slide.classList.add('is-current');
         }
-        if (Math.abs((_this4.state.index + 3) % _this4.state.length) === parseInt(slide.dataset.sliderIndex, 10)) {
-          slide.classList.add('is-slide-next');
-        }
+        // if (Math.abs((_this4.state.index + 1) % _this4.state.length) === parseInt(slide.dataset.sliderIndex, 10)) {
+        //   slide.classList.add('is-slide-next');
+        // }
       });
     }
 
