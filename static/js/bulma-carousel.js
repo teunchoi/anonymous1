@@ -737,20 +737,24 @@ var bulmaCarousel = function (_EventEmitter) {
   }, {
     key: 'next',
     value: function next() {
-      if (!this.options.loop && !this.options.infinite && this.state.index + this.slidesToScroll > this.state.length - this.slidesToShow && !this.options.centerMode) {
+		var slidesToScroll = this.options.slidesToScroll || 1; // slidesToScroll 값을 읽어옴
+
+      if (!this.options.loop && !this.options.infinite && this.state.index + slidesToScroll > this.state.length - this.slidesToShow && !this.options.centerMode) {
         this.state.next = this.state.index;
       } else {
-        this.state.next = this.state.index + 3;
+        this.state.next = this.state.index + slidesToScroll;
       }
       this.show();
     }
   }, {
     key: 'previous',
     value: function previous() {
+		var slidesToScroll = this.options.slidesToScroll || 1; // slidesToScroll 값을 읽어옴
+
       if (!this.options.loop && !this.options.infinite && this.state.index === 0) {
         this.state.next = this.state.index;
       } else {
-        this.state.next = this.state.index - 3;
+        this.state.next = this.state.index - slidesToScroll;
       }
       this.show();
     }
@@ -789,6 +793,7 @@ var bulmaCarousel = function (_EventEmitter) {
       if (this.options.infinite) {
         this._infinite.apply();
       }
+	  this.state.index = Math.min(Math.max(this.state.next, 0), this.state.length - this.slidesToShow);
 
       // If new slide is already the current one then return
       if (this.state.index === this.state.next) {
@@ -812,6 +817,7 @@ var bulmaCarousel = function (_EventEmitter) {
         next: Math.abs(this.options.initialSlide),
         prev: undefined
       };
+	  this.options.slidesToScroll = this.options.slidesToScroll || 3;  // slidesToScroll 기본값 설정
 
       // Fix options
       if (this.options.loop && this.options.infinite) {
