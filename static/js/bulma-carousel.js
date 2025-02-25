@@ -740,7 +740,7 @@ var bulmaCarousel = function (_EventEmitter) {
       if (!this.options.loop && !this.options.infinite && this.state.index + this.slidesToScroll > this.state.length - this.slidesToShow && !this.options.centerMode) {
         this.state.next = this.state.index;
       } else {
-        this.state.next = this.state.index + this.slidesToScroll;
+        this.state.next = this.state.index + 3;
       }
       this.show();
     }
@@ -750,7 +750,7 @@ var bulmaCarousel = function (_EventEmitter) {
       if (!this.options.loop && !this.options.infinite && this.state.index === 0) {
         this.state.next = this.state.index;
       } else {
-        this.state.next = this.state.index - this.slidesToScroll;
+        this.state.next = this.state.index - 3;
       }
       this.show();
     }
