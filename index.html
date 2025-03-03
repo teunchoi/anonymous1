@@ -225,8 +225,12 @@
             </div>
             <br>
             <p style="font-size: 15px;">
-              Given an input view , depth map and continuous camera poses, our method generates scene images with smooth view transitions. (b) Pose-aware noise initialization re-initializes the diffusion initial noise by leveraging warped images and initial noise, incorporating frequency domain information. (c) Warp-Guided Adaptive Attention utilizes the warped region mask and reference range obtained from the Adaptive Warp-Range selection, performing masked batch self-attention on the warped region mask and reference range. Thus, (a) our method warps the input view according to the continuous camera poses and the depth map, processes it through both Pose-Aware Noise Initialization and Warp-Guided Adaptive Attention, and generates consistent novel view images.            </p>
-            <br>
+              <b>Illustration of the method.</b>
+              Given an input view, depth map and continuous camera poses, our method generates scene images with smooth view transitions. 
+              (b) pose-aware noise initialization (PANI) re-initializes the diffusion initial noise by leveraging warped images and initial noise, ncorporating frequency domain information. 
+              (c) warp-guided adaptive attention (WGAA) utilizes the warped region mask and reference range obtained from the adaptive warp-range selection, performing masked batch self-attention. 
+              Thus, (a) our method warps the input view image according to the continuous camera poses and the depth map, processes it through both pose-aware noise initialization and warp-guided adaptive attention, and generates consistent novel view images.            
+              <br>
             <br>
           </div>
       </div>
