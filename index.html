@@ -179,17 +179,18 @@
         <br>
         <div class="content has-text-justified">
           <p style="font-size: 15px;">
-            Generating high-quality novel views of a scene from a single image requires maintaining spatial consistency across different viewpoints, commonly referred to as view consistency. 
-            While diffusion models have advanced the task of novel view synthesis, they struggle to preserve spatial coherence across views. 
-            To address this, diffusion models have been combined with 3D models, but such approaches often lack efficiency for practical use due to their complex multi-step pipelines.
-            In this work, we propose a training-free method which utilizes diffusion models to overcome this limitation without relying on additional models. Our key idea is to enhance diffusion models by leveraging view-guided warping, enabling adaptive attention manipulation and noise re-initialization to mitigate view inconsistency. Through comprehensive metrics and extensive quantitative evaluations and generation results, we demonstrate that our method achieves view consistency, which maintains structural coherence across viewpoints within a scene. 
-            Furthermore, our approach is adaptable to various diffusion models, demonstrating its broader applicability.  
+            Generating high-quality novel views of a scene from a single image requires maintaining structural coherence across different views, referred to as view consistency.
+            While diffusion models have driven advancements in novel view synthesis, they struggle to preserve spatial continuity across views. 
+            Diffusion models have been combined with 3D models to address the issue, but such approaches lack efficiency due to their complex multi-step pipelines.
+            This work proposes a novel consistent view generation method which utilizes diffusion models without relying on additional models. Our key idea is to enhance diffusion models with a training-free method by leveraging view-guided warping, enabling adaptive attention manipulation and noise reinitialization to mitigate view inconsistency. 
+            Through comprehensive metrics and qualitative results, we show that our method achieves view consistency and also demonstrates adaptability to various diffusion models.
           </p>
           <br>
           <br>
         </div>
       </div>
     </div>
+  </div>
 </section>
 
 <section class="hero teaser">
@@ -208,7 +209,7 @@
       <br>
       <br>
     </div>
-  </div>
+    </div>
   </div>
 </section>
 
@@ -230,7 +231,8 @@
               (b) pose-aware noise initialization (PANI) re-initializes the diffusion initial noise by leveraging warped images and initial noise, ncorporating frequency domain information. 
               (c) warp-guided adaptive attention (WGAA) utilizes the warped region mask and reference range obtained from the adaptive warp-range selection, performing masked batch self-attention. 
               Thus, (a) our method warps the input view image according to the continuous camera poses and the depth map, processes it through both pose-aware noise initialization and warp-guided adaptive attention, and generates consistent novel view images.            
-              <br>
+            </p>
+            <br>
             <br>
           </div>
       </div>
@@ -252,9 +254,12 @@
             </div>
             <br>
             <p style="font-size: 15px;">
-              By applying our proposed method, we generate results across multiple camera poses, demonstrating its effectiveness in handling different viewpoints. Additionally, to further illustrate its capability, we perform additional generations along another pose trajectory, providing diverse examples of novel view synthesis.         <br>
-         <br>
-            </div>
+              By applying our proposed method, we generate results across multiple camera poses, demonstrating its effectiveness in handling different viewpoints. 
+              Additionally, to further illustrate its capability, we perform additional generations along another pose trajectory, providing diverse examples of novel view synthesis.         
+            </p>
+            <br>
+            <br>
+          </div>
       </div>
     </div>
   </div>
@@ -275,14 +280,12 @@
             </div>
             <br>
             <p style="font-size: 15px;">
-              We conduct experiments on MegaScenes, DTU, and Re10K and evaluate consistency using two metrics: First metric, which measures consistency with the first frame, and Next metric, which assesses consistency with
-              neighboring viewpoints. Additionally, to evaluate camera accuracy, a crucial aspect of novel view synthesis, we report the accuracy of
-              camera extrinsic parameters using Frobenius Norm, Rotation Angle, and Angular Consistency.
+              We conduct experiments on the three datasets MegaScenes, DTU, and RE10K and evaluate consistency using two metrics: <i>first</i> metric, which measures consistency with the input view, and <i>next</i> metric, which assesses consistency with neighboring viewpoints. 
+              Additionally, to evaluate camera accuracy, a crucial aspect of novel view synthesis, we report the accuracy of camera extrinsic parameters using Frobenius Norm, Rotation Angle, and Angular Consistency.
             </p>
           </div>
           <br>
           <br>
-          
       </div>
     </div>
   </div>
