@@ -67,7 +67,7 @@
             <img src="./static/images/main.gif" alt="first" width="100%">
           </div>
           <p style="font-size: 15px;">
-            Our approach utilizes warping algorithm on diffusion models to generate view-consistent images from a single scene-level image.  
+            Our approach utilizes a warping algorithm on diffusion models to generate view-consistent images from a single scene-level image.  
           </p>
         <br>
       </div>
@@ -284,6 +284,30 @@
             <p style="font-size: 15px;">
               We conduct experiments on the three datasets MegaScenes, DTU, and RE10K and evaluate consistency using two metrics: <i>first</i> metric, which measures consistency with the input view, and <i>next</i> metric, which assesses consistency with neighboring viewpoints. 
               Additionally, to evaluate camera accuracy, a crucial aspect of novel view synthesis, we report the accuracy of camera extrinsic parameters using Frobenius Norm, Rotation Angle, and Angular Consistency.
+            </p>
+          </div>
+          <br>
+          <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Overall Comparison of Methods</h2>
+        <br>
+          <div class="content has-text-justified">
+            <br>
+            <div class="centerImage">
+              <img src="./static/images/overall.png" alt="pipeline" width="100%">
+            </div>
+            <br>
+            <p style="font-size: 15px;">
+              The size of the circles represents inference time. Applying our method improves performance without a significant increase in computation cost.
             </p>
           </div>
           <br>
