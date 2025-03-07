@@ -194,8 +194,8 @@
             Generating high-quality novel views of a scene from a single image requires maintaining structural coherence across different views, referred to as view consistency.
             While diffusion models have driven advancements in novel view synthesis, they still struggle to preserve spatial continuity across views. 
             Diffusion models have been combined with 3D models to address the issue, but such approaches lack efficiency due to their complex multi-step pipelines.
-            In this work, we propose a novel view-consistent image generation method which utilizes diffusion models without relying on additional models. 
-            Our key idea is to enhance diffusion models with a training-free method that enables adaptive attention manipulation and noise reinitialization by leveraging view-guided warping to mitigate view consistency. 
+            This paper proposes a novel view-consistent image generation method which utilizes diffusion models without additional modules. 
+            Our key idea is to enhance diffusion models with a training-free method that enables adaptive attention manipulation and noise reinitialization by leveraging view-guided warping to ensure view consistency. 
             Through our comprehensive metric framework suitable for novel-view datasets, we show that our method improves view consistency across various diffusion models, demonstrating its broader applicability.
           </p>
           <br>
@@ -293,7 +293,7 @@
             </div>
             <br>
             <p style="font-size: 15px;">
-              We conduct experiments on the three datasets MegaScenes, DTU, and RE10K and evaluate consistency using two metrics: \textit{next} metric, which assesses consistency with neighboring viewpoints, and \textit{first} metric, which measures consistency with the input view. 
+              We conduct experiments on the three datasets MegaScenes, DTU, and RE10K and evaluate consistency using two metrics: <i>next</i> metric, which assesses consistency with neighboring viewpoints, and <i>first</i> metric, which measures consistency with the input view. 
               Additionally, to evaluate camera accuracy, a crucial aspect of novel view synthesis, we report the accuracy of camera extrinsic parameters using Frobenius Norm, Rotation Angle Difference, and Angular Consistency.  
             </p>
           </div>
